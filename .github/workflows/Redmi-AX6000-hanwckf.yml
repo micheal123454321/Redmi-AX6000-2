@@ -137,7 +137,7 @@ jobs:
         removeArtifacts: false
         artifacts: ${{ env.FIRMWARE }}/*
         allowUpdates: true
-        token: ${{ secrets.GH_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         body: |
             redmi-ax6000 固件精简版, 闭源驱动(非DSA)
             基于openwrt-21.02, kernel 5.4, 编译时间: ${{ env.FILE_DATE }}
@@ -153,7 +153,7 @@ jobs:
       uses: Mattraks/delete-workflow-runs@main
       if: env.ORGANIZE_STATUS == 'success' && (!cancelled())
       with:
-        token: ${{ secrets.GH_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         repository: ${{ github.repository }}
         retain_days: 3
         keep_minimum_runs: 2
@@ -168,4 +168,4 @@ jobs:
         delete_tag_pattern: 'redmi_ax6000'
         delete_tags: true
       env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
