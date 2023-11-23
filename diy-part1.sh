@@ -19,7 +19,7 @@
 
 # ---------------------------------------------------------------
 ## OpenClash
-git clone https://github.com/vernesong/OpenClash.git openclash
+git clone -b master https://github.com/vernesong/openclash.git OpenClash
 rm -rf feeds/luci/applications/luci-app-openclash
-cp -r openclash/luci-app-openclash feeds/luci/applications/luci-app-openclash
+mv OpenClash/luci-app-openclash feeds/luci/applications/luci-app-openclash
 # ---------------------------------------------------------------
