@@ -50,11 +50,15 @@ jobs:
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean
         sudo timedatectl set-timezone "$TZ"
-
+        sudo mkdir -p /workdir
+        sudo chown $USER:$GROUPS /workdir
+        
     - name: Clone source code
+      working-directory: /workdir
       run: |
         df -hT $PWD
-        git clone --depth 1 --single-branch $REPO_URL -b $REPO_BRANCH iwrt
+        git clone $REPO_URL -b $REPO_BRANCH openwrt
+        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
     - name: Load custom feeds
       run: |
@@ -62,6 +66,12 @@ jobs:
         chmod +x $DIY_P1_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
+
+    - name: Update feeds
+      run: cd openwrt && ./scripts/feeds update -a
+
+    - name: Install feeds
+      run: cd openwrt && ./scripts/feeds install -a
 
     - name: Load custom configuration
       run: |
