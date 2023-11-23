@@ -17,9 +17,4 @@
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
-# ---------------------------------------------------------------
-## OpenClash
-# git clone --depth 1 https://github.com/vernesong/openclash.git OpenClash
-# rm -rf feeds/luci/applications/luci-app-openclash
-# mv OpenClash/luci-app-openclash feeds/luci/applications/luci-app-openclash
-# ---------------------------------------------------------------
+
