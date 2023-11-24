@@ -139,7 +139,7 @@ jobs:
         allowUpdates: true
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
-            redmi-ax6000 固件精简版, 闭源驱动(非DSA)
+            redmi-ax6000 固件精简版, 闭源驱动
             基于openwrt-21.02, kernel 5.4, 编译时间: ${{ env.FILE_DATE }}
             
             Default IP: 192.168.6.1
@@ -147,7 +147,7 @@ jobs:
             Default password: password
             
             插件列表： 
-              ├ OpenClash + 内核
+              ├ OpenClash 0.45.152 + 全部内核 + GeoIP 数据库 + GeoSite 数据库
         
     - name: 删除工作流程运行
       uses: Mattraks/delete-workflow-runs@main
