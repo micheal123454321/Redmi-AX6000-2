@@ -12,6 +12,5 @@ luci-app-turboacc-mtk
 luci-theme-argon
 luci-theme-bootstrap
 
-luci-app-openclash
-
+luci-app-openclash 0.45.152 + 全部内核 + GeoIP 数据库 + GeoSite 数据库
 ```
