@@ -37,10 +37,10 @@ ruleset=🎯 全球直连,[]GEOIP,private,no-resolve
 ruleset=🎯 全球直连,[]GEOSITE,private
 
 ; 国内域名，匹配上的走直连
-ruleset=🎯 全球直连,[]GEOSITE,CN
+ruleset=🎯 全球直连,[]GEOSITE,cn
 
 ; 国内基于IP的地址，匹配上走直连，不发起DNS请求
-ruleset=🎯 全球直连,[]GEOIP,CN,no-resolve
+ruleset=🎯 全球直连,[]GEOIP,cn,no-resolve
 
 ; 兜底，都没匹配上就走代理
 ruleset=🌐 代理终端,[]FINAL
