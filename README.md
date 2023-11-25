@@ -44,4 +44,25 @@ ruleset=🎯 全球直连,[]GEOIP,CN,no-resolve
 
 ; 兜底，都没匹配上就走代理
 ruleset=🌐 代理终端,[]FINAL
+
+custom_proxy_group=🚀 节点选择`select`[]🇭🇰 香港-自动`[]🇸🇬 狮城-自动`.*
+custom_proxy_group=🎯 全球直连`select`[]DIRECT`[]🚀 节点选择
+; custom_proxy_group=🛑 隐私拦截`select`[]REJECT`[]DIRECT
+custom_proxy_group=🌐 代理终端`select`[]🚀 节点选择`[]🎯 全球直连
+
+;自动测速
+custom_proxy_group=🇭🇰 香港-自动`url-test`(港|HK|Hong Kong)`https://www.gstatic.com/generate_204`600,,50
+custom_proxy_group=🇸🇬 狮城-自动`url-test`(新加坡|坡|狮城|SG|Singapore)`https://www.gstatic.com/generate_204`600,,50
+
+
+enable_rule_generator=true
+overwrite_original_rules=true
+;skip_failed_links=true
+
+#过滤节点，正则匹配
+exclude_remarks=(IPV6|重置|流量|用户|本站|漏洞|永久虚通路|车|邀|免翻|邀请|eevpn|域名|机场|刷新|禁止|备用登录|计划|面板|忘记|到期|套餐|官网|更多|关注|25倍率|http|增加|持续|渠道|购买|QQ|Ins|二手)
+
+;luck
+Comment
+
 ```
