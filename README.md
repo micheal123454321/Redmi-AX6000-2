@@ -19,7 +19,7 @@ luci-app-openclash + 全部内核 + GeoIP 数据库 + GeoSite 数据库
 **OpenClash 设置**
 ```
 开启
-FakeIP增强模式 + Meta内核
+FakeIP TUN模式 + Meta内核
 自定义上游DNS，NameServer只需要填上一个或者两个运营商分配的DNS即可
 FallBack跟Default-NameServer清空自带所有DNS
 
