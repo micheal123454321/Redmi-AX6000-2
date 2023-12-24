@@ -20,8 +20,7 @@ luci-app-openclash + 全部内核 + GeoIP 数据库 + GeoSite 数据库
 ```
 开启
 使用 Meta 内核
-运行模式 Fake-IP（TUN）模式
-网络栈类型 Gvisor
+运行模式 Fake-IP（TUN-混合）模式【UDP-TUN，TCP-转发】
 
 自定义上游DNS，NameServer只需要填上一个或两个运营商分配的DNS即可
 清空 FallBack 跟 Default-NameServer 所有DNS
