@@ -18,24 +18,27 @@ luci-app-openclash + 全部内核 + GeoIP 数据库 + GeoSite 数据库
 
 **OpenClash 设置**
 ```
-开启
 使用 Meta 内核
-运行模式 Fake-IP（TUN-混合）模式【UDP-TUN，TCP-转发】
+*运行模式Fake-IP（增强）模式
+UDP 流量转发
+
+使用 Dnsmasq 转发
+禁止 Dnsmasq 缓存 DNS
+
 
 自定义上游DNS，NameServer只需要填上一个或两个运营商分配的DNS即可
 清空 FallBack 跟 Default-NameServer 所有DNS
 
-Fake-IP 持久化
 
+IPv6 设置
+IPv6 流量代理
+IPv6 代理模式  TProxy 模式
+UDP 流量转发
 允许解析 IPv6 类型的 DNS 请求
 
 自动更新 GeoIP Dat 数据库
 自动更新 GeoSite 数据库
 
 自动更新 大陆白名单
-
-启用流量（域名）探测
-探测（嗅探）纯 IP 连接
-自定义流量探测（嗅探）设置
 ```
 
