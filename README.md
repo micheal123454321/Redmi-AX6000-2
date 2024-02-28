@@ -21,6 +21,10 @@ luci-app-openclash + 全部内核 + GeoIP 数据库 + GeoSite 数据库
 使用 Meta 内核
 运行模式 Fake-IP（TUN-混合）模式【UDP-TUN，TCP-转发】
 
+绕过中国大陆 IPv4 黑名单
+##解决绕过大陆后谷歌商店无法更新
+#services.googleapis.cn
+
 
 使用 Dnsmasq 转发
 禁止 Dnsmasq 缓存 DNS
