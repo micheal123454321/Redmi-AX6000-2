@@ -31,9 +31,7 @@ luci-app-openclash + 全部内核 + GeoIP 数据库 + GeoSite 数据库
 【勾选】，禁止 Dnsmasq 缓存 DNS
 
 清空 NameServer、FallBack、Default-NameServer 所有DNS
-【勾选】，Nameserver-Policy 填入：'GEOSITE:cn': '223.6.6.6'
-
-【勾选】，自定义上游DNS，NameServer只需要填入：doh.apad.pro/dns-query，服务器类型选择：HTTPS
+NameServer只需要填上一个运营商分配的DNS即可
 
 【勾选】，允许解析 IPv6 类型的 DNS 请求
 
