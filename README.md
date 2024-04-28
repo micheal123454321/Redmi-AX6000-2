@@ -30,13 +30,16 @@ luci-app-openclash + 全部内核 + GeoIP 数据库 + GeoSite 数据库
 使用 Dnsmasq 转发
 【勾选】，禁止 Dnsmasq 缓存 DNS
 
-清空 NameServer、FallBack、Default-NameServer 所有DNS
-NameServer只需要填上一个运营商分配的DNS即可
-
 【勾选】，允许解析 IPv6 类型的 DNS 请求
 
 【勾选】，自动更新 GeoIP Dat 数据库
 【勾选】，自动更新 GeoSite 数据库
+
+【勾选】，自定义上游 DNS 服务器
+  清空 NameServer、FallBack、Default-NameServer 所有DNS
+  NameServer只需要填上一个运营商分配的DNS即可
+
+【勾选】，Fake-IP 持久化
 
 【勾选】，自动更新 大陆白名单
 
