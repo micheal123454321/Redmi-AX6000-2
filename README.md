@@ -40,12 +40,15 @@ luci-app-openclash + 全部内核 + GeoIP 数据库 + GeoSite 数据库
   清空 NameServer、FallBack、Default-NameServer 所有DNS
 
 
+【勾选】，自动更新 GeoIP Dat 数据库
+【勾选】，自动更新 GeoSite 数据库
+
 【勾选】，自动更新 大陆白名单
 
 【取消】，启用流量（域名）探测
 
 开发者选项
-按照图中内容，找到 Hash Demo 下的对应代码，取消注释并修改 true 为 false
+找到 Hash Demo 下的对应代码，取消注释并修改 true 为 false
 ruby_edit "$CONFIG_FILE" "['experimental']" "{'sniff-tls-sni'=>false}"
 
 ```
