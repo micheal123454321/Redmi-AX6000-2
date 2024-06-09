@@ -47,9 +47,15 @@ luci-app-openclash + 全部内核 + GeoIP 数据库 + GeoSite 数据库
 
 【取消】，启用流量（域名）探测
 
-开发者选项
+覆写设置-》开发者选项
 找到 Hash Demo 下的对应代码，取消注释并修改 true 为 false
 ruby_edit "$CONFIG_FILE" "['experimental']" "{'sniff-tls-sni'=>false}"
+
+插件设置-》开发者选项
+iptables -t nat -A PREROUTING -p udp -s 192.168.6.1/16 --dport 53 -j CLASH_DNS_RULE
+iptables -t nat -A PREROUTING -p tcp -s 192.168.6.1/16 --dport 53 -j CLASH_DNS_RULE
+iptables -t nat -A PREROUTING -p udp -s 192.168.6.1/16 --dport 853 -j CLASH_DNS_RULE
+iptables -t nat -A PREROUTING -p tcp -s 192.168.6.1/16 --dport 853 -j CLASH_DNS_RULE 
 
 ```
 
