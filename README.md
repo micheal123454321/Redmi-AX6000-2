@@ -21,10 +21,6 @@ luci-app-openclash + 全部内核 + GeoIP 数据库 + GeoSite 数据库
 【勾选】，使用 Meta 内核
 【切换】运行模式 Fake-IP（TUN-混合）模式【UDP-TUN，TCP-转发】
 
-绕过中国大陆 IPv4 黑名单
-##解决绕过大陆后谷歌商店无法更新
-#services.googleapis.cn
-
 使用 Dnsmasq 转发
 【勾选】，禁止 Dnsmasq 缓存 DNS
 
@@ -46,12 +42,6 @@ luci-app-openclash + 全部内核 + GeoIP 数据库 + GeoSite 数据库
 【勾选】，自动更新 大陆白名单
 
 【取消】，启用流量（域名）探测
-
-插件设置-》开发者选项
-iptables -t nat -A PREROUTING -p udp -s 192.168.6.1/16 --dport 53 -j CLASH_DNS_RULE
-iptables -t nat -A PREROUTING -p tcp -s 192.168.6.1/16 --dport 53 -j CLASH_DNS_RULE
-iptables -t nat -A PREROUTING -p udp -s 192.168.6.1/16 --dport 853 -j CLASH_DNS_RULE
-iptables -t nat -A PREROUTING -p tcp -s 192.168.6.1/16 --dport 853 -j CLASH_DNS_RULE 
 
 ```
 
