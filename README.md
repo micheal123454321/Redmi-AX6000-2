@@ -20,8 +20,9 @@ luci-app-openclash + 全部内核 + GeoIP 数据库 + GeoSite 数据库
 ```
 【勾选】，使用 Meta 内核
 【切换】运行模式 Fake-IP（TUN-混合）模式【UDP-TUN，TCP-转发】
+【切换】网络栈类型 Mixed（仅 Meta 内核）
 
-使用 Dnsmasq 转发
+ 使用 Dnsmasq 转发
 【勾选】，禁止 Dnsmasq 缓存 DNS
 
 【勾选】，允许解析 IPv6 类型的 DNS 请求
