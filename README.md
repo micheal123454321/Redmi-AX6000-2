@@ -49,7 +49,8 @@ Github 地址修改 https://testingcf.jsdelivr.net/
 
 【勾选】，自动更新 大陆白名单
 
-【取消】，启用流量（域名）探测
 
+【取消】，启用流量（域名）探测
+【勾选】，启用 GeoIP Dat 版数据库
 ```
 
