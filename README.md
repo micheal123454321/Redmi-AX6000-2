@@ -39,21 +39,17 @@ luci-app-openclash + 全部内核 + GeoIP 数据库 + GeoSite 数据库
 
 Github 地址修改 https://testingcf.jsdelivr.net/
 
-
 【勾选】，自定义上游 DNS 服务器
 【勾选】，追加上游 DNS
 【勾选】，Fake-IP 持久化
 
   清空 NameServer、FallBack、Default-NameServer 所有DNS
 
-
 【勾选】，自动更新 GeoIP Dat 数据库
 【勾选】，自动更新 GeoSite 数据库
 
 【勾选】，自动更新 大陆白名单
 
-
-TCP Keep-alive 间隔（s）3600
 【取消】，启用流量（域名）探测
 【勾选】，启用 GeoIP Dat 版数据库
 ```
