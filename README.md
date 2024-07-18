@@ -19,9 +19,10 @@ luci-app-openclash + 全部内核 + GeoIP 数据库 + GeoSite 数据库
 **OpenClash 设置**
 ```
 【勾选】，使用 Meta 内核
-【切换】，运行模式 Fake-IP（增强）模式
-【勾选】，UDP 流量转发
 
+【切换】，Fake-IP（TUN-混合）模式【UDP-TUN，TCP-转发】
+
+网络栈类型 Mixed（仅 Meta 内核）
 
 【勾选】，绕过服务器地址
 
