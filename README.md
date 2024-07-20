@@ -53,4 +53,20 @@ Github 地址修改 https://testingcf.jsdelivr.net/
 【取消】，启用流量（域名）探测
 【勾选】，启用 GeoIP Dat 版数据库
 ```
+**IPV6 设置**
+```
+删除 全局网络选项 » IPv6 ULA 前缀
 
+接口 » LAN » 高级设置
+【取消】委托 IPv6 前缀
+IPv6 分配长度 64
+
+接口 » LAN » DHCP 服务器
+RA 服务 服务器模式
+DHCPv6 服务 已禁用
+NDP 代理 已禁用
+
+接口 » LAN » DHCP 服务器 » IPv6 RA 设置
+启用 SLAAC
+RA 标记 无
+```
