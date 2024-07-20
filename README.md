@@ -64,6 +64,7 @@ IPv6 分配长度 64
 接口 » LAN » DHCP 服务器
 RA 服务 服务器模式
 DHCPv6 服务 已禁用
+【取消】本地 IPV6 DNS 服务器
 NDP 代理 已禁用
 
 接口 » LAN » DHCP 服务器 » IPv6 RA 设置
