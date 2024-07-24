@@ -53,5 +53,5 @@ mv /tmp/GeoIP.dat feeds/luci/applications/luci-app-openclash/root/etc/openclash/
 
 # ##-------------- GeoSite 数据库 ---------------------------
 curl -sL -m 30 --retry 2 https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat -o /tmp/GeoSite.dat
-mv /tmp/GeoSite.dat feeds/luci/applications/luci-app-openclash/root/etc/openclash/GeoSite.dat >/dev/null 2>&1
+mv -f /tmp/GeoSite.dat feeds/luci/applications/luci-app-openclash/root/etc/openclash/GeoSite.dat >/dev/null 2>&1
 # ##---------------------------------------------------------
