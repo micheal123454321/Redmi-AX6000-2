@@ -23,7 +23,7 @@ mv OpenClash/luci-app-openclash feeds/luci/applications/luci-app-openclash
 # ---------------------------------------------------------------
 
 # ##---------------- dev core ----------------------------
-curl -sL -m 30 --retry 2 https://raw.githubusercontent.com/vernesong/OpenClash/core/master/dev/clash-linux-arm64.tar.gz -o /tmp/clash.tar.gz
+curl -sL -m 30 --retry 2 https://raw.githubusercontent.com/vernesong/OpenClash/core/dev/dev/clash-linux-arm64.tar.gz -o /tmp/clash.tar.gz
 tar zxvf /tmp/clash.tar.gz -C /tmp >/dev/null 2>&1
 chmod +x /tmp/clash >/dev/null 2>&1
 mkdir -p feeds/luci/applications/luci-app-openclash/root/etc/openclash/core
@@ -32,14 +32,14 @@ rm -rf /tmp/clash.tar.gz >/dev/null 2>&1
 ##---------------------------------------------------------
 
 # ##------------- tun core --------------------------------
-curl -sL -m 30 --retry 2 https://raw.githubusercontent.com/vernesong/OpenClash/core/master/premium/clash-linux-arm64-2023.08.17-13-gdcc8d87.gz -o /tmp/clash.gz
+curl -sL -m 30 --retry 2 https://raw.githubusercontent.com/vernesong/OpenClash/core/dev/premium/clash-linux-arm64-2023.08.17-13-gdcc8d87.gz -o /tmp/clash.gz
 gzip -d /tmp/clash.gz /tmp >/dev/null 2>&1
 chmod +x /tmp/clash >/dev/null 2>&1
 mv /tmp/clash feeds/luci/applications/luci-app-openclash/root/etc/openclash/core/clash_tun >/dev/null 2>&1
 # ##---------------------------------------------------------
 
 # ##------------- meta core ---------------------------------
-curl -sL -m 30 --retry 2 https://raw.githubusercontent.com/vernesong/OpenClash/core/master/meta/clash-linux-arm64.tar.gz -o /tmp/clash.tar.gz
+curl -sL -m 30 --retry 2 https://raw.githubusercontent.com/vernesong/OpenClash/core/dev/meta/clash-linux-arm64.tar.gz -o /tmp/clash.tar.gz
 tar zxvf /tmp/clash.tar.gz -C /tmp >/dev/null 2>&1
 chmod +x /tmp/clash >/dev/null 2>&1
 mv /tmp/clash feeds/luci/applications/luci-app-openclash/root/etc/openclash/core/clash_meta >/dev/null 2>&1
