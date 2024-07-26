@@ -55,3 +55,10 @@ mv /tmp/GeoIP.dat feeds/luci/applications/luci-app-openclash/root/etc/openclash/
 curl -sL -m 30 --retry 2 https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat -o /tmp/GeoSite.dat
 mv -f /tmp/GeoSite.dat feeds/luci/applications/luci-app-openclash/root/etc/openclash/GeoSite.dat >/dev/null 2>&1
 # ##---------------------------------------------------------
+
+# ##-------------- IP地址SpeedTest不显示归属地 ---------------
+curl -sL -m 30 --retry 2  https://github.com/vernesong/OpenClash/raw/dev/luci-app-openclash/luasrc/view/openclash/myip.htm -o /tmp/ myip.htm
+mv -f /tmp/myip.htm feeds/luci/applications/luci-app-openclash/root/usr/lib/lua/luci/view/openclash/myip.htm >/dev/null 2>&1
+# ##---------------------------------------------------------
+
+
