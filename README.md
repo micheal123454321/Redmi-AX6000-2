@@ -70,4 +70,7 @@ NDP 代理 已禁用
 接口 » LAN » DHCP 服务器 » IPv6 RA 设置
 启用 SLAAC
 RA 标记 无
+
+接口 » WAN6 » 高级设置
+【取消】IPv6 源路由
 ```
