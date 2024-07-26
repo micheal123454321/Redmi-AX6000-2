@@ -10,10 +10,8 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
-
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generate
-
 
 # ---------------------------------------------------------------
 ## OpenClash
@@ -58,7 +56,8 @@ mv -f /tmp/GeoSite.dat feeds/luci/applications/luci-app-openclash/root/etc/openc
 
 # ##-------------- IP地址SpeedTest不显示归属地 ---------------
 curl -sL -m 30 --retry 2  https://github.com/vernesong/OpenClash/raw/dev/luci-app-openclash/luasrc/view/openclash/myip.htm -o /tmp/ myip.htm
-mv -f /tmp/myip.htm feeds/luci/applications/luci-app-openclash/root/usr/lib/lua/luci/view/openclash/myip.htm >/dev/null 2>&1
+mkdir -p feeds/luci/applications/luci-app-openclash/root/usr/lib/lua/luci/view/
+mv /tmp/myip.htm feeds/luci/applications/luci-app-openclash/root/usr/lib/lua/luci/view/openclash/myip.htm >/dev/null 2>&1
 # ##---------------------------------------------------------
 
 
