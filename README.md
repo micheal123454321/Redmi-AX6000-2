@@ -24,11 +24,6 @@ luci-app-openclash + 全部内核 + GeoIP 数据库 + GeoSite 数据库
 
 网络栈类型 Mixed（仅 Meta 内核）
 
-【勾选】，绕过服务器地址
-
-【勾选】，仅允许内网
-         WAN 接口名称 eth1
-
  使用 Dnsmasq 转发
 【勾选】，禁止 Dnsmasq 缓存 DNS
 
