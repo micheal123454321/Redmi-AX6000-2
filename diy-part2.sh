@@ -16,7 +16,7 @@ sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generat
 # ---------------------------------------------------------------
 ## OpenClash
 git clone --depth 1 https://github.com/vernesong/openclash.git OpenClash
-curl -sL -m 30 --retry 2  https://github.com/vernesong/OpenClash/raw/dev/luci-app-openclash/luasrc/view/openclash/myip.htm -o /tmp/ myip.htm
+curl -sL -m 30 --retry 2  https://github.com/vernesong/OpenClash/raw/dev/luci-app-openclash/luasrc/view/openclash/myip.htm -o /tmp/myip.htm
 mv -f /tmp/myip.htm OpenClash/luci-app-openclash/luasrc/view/openclash/myip.htm
 rm -rf feeds/luci/applications/luci-app-openclash
 mv OpenClash/luci-app-openclash feeds/luci/applications/luci-app-openclash
