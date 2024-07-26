@@ -21,7 +21,7 @@ luci-app-openclash + 全部内核 + GeoIP 数据库 + GeoSite 数据库
 【勾选】，使用 Meta 内核
 
 运行模式 Fake-IP（增强）模式
-UDP 流量转发
+【勾选】UDP 流量转发
 
  使用 Dnsmasq 转发
 【勾选】，禁止 Dnsmasq 缓存 DNS
