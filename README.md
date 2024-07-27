@@ -31,6 +31,7 @@ luci-app-openclash + 全部内核 + GeoIP 数据库 + GeoSite 数据库
 
 【勾选】，自动更新 GeoIP Dat 数据库
 【勾选】，自动更新 GeoSite 数据库
+【勾选】，自动更新 大陆白名单
 
 Github 地址修改 https://testingcf.jsdelivr.net/
 
@@ -43,11 +44,6 @@ Fallback DNS 代理组 (支持正则匹配) ⚡️ 国际代理
   清空 NameServer、FallBack、Default-NameServer 所有DNS
 
 在NameServer填入一个营运营商DNS
-
-【勾选】，自动更新 GeoIP Dat 数据库
-【勾选】，自动更新 GeoSite 数据库
-
-【勾选】，自动更新 大陆白名单
 
 【勾选】，启用 TCP 并发
 【勾选】，启用流量（域名）探测
