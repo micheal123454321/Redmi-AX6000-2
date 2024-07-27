@@ -20,8 +20,9 @@ luci-app-openclash + 全部内核 + GeoIP 数据库 + GeoSite 数据库
 ```
 【勾选】，使用 Meta 内核
 
-运行模式 Fake-IP（增强）模式
-【取消】UDP 流量转发
+运行模式 Fake-IP（TUN-混合）模式【UDP-TUN，TCP-转发】
+网络栈类型 Mixed（仅 Meta 内核）
+
 
  使用 Dnsmasq 转发
 【勾选】，禁止 Dnsmasq 缓存 DNS
@@ -34,7 +35,10 @@ luci-app-openclash + 全部内核 + GeoIP 数据库 + GeoSite 数据库
 Github 地址修改 https://testingcf.jsdelivr.net/
 
 【勾选】，自定义上游 DNS 服务器
+Fallback DNS 代理组 (支持正则匹配) ⚡️ 国际代理
 【勾选】，Fake-IP 持久化
+【勾选】，Fake-IP-Filter
+
 
   清空 NameServer、FallBack、Default-NameServer 所有DNS
 
@@ -45,7 +49,9 @@ Github 地址修改 https://testingcf.jsdelivr.net/
 
 【勾选】，自动更新 大陆白名单
 
-【取消】，启用流量（域名）探测
+【勾选】，启用 TCP 并发
+【勾选】，启用流量（域名）探测
+【勾选】，探测（嗅探）纯 IP 连接
 【勾选】，启用 GeoIP Dat 版数据库
 ```
 **IPV6 设置**
