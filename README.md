@@ -13,6 +13,7 @@ luci-app-turboacc-mtk
 luci-app-upnp
 luci-theme-argon
 luci-theme-bootstrap
+luci-app-ttyd
 luci-app-openclash + 全部内核 + GeoIP 数据库 + GeoSite 数据库
 ```
 
