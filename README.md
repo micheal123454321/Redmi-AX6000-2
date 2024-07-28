@@ -38,8 +38,6 @@ Github 地址修改 https://testingcf.jsdelivr.net/
 【勾选】，自定义上游 DNS 服务器
 Fallback DNS 代理组 (支持正则匹配) ⚡️ 国际代理
 【勾选】，Fake-IP 持久化
-【勾选】，Fake-IP-Filter
-
 
   清空 NameServer、FallBack、Default-NameServer 所有DNS
 
