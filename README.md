@@ -51,6 +51,10 @@ TCP Keep-alive 间隔（s）15
 【勾选】，启用流量（域名）探测
 【勾选】，探测（嗅探）纯 IP 连接
 【勾选】，自定义流量探测（嗅探）设置
+
+覆写设置 开发者选项 #27
+ruby_edit "$CONFIG_FILE" "['experimental']" "{'sniff-tls-sni'=>false}"
+
 ```
 **IPV6 设置**
 ```
