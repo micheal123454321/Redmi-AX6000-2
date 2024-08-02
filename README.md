@@ -24,6 +24,7 @@ luci-app-openclash + 全部内核 + GeoIP 数据库 + GeoSite 数据库
  运行模式 Fake-IP（增强）模式
 【勾选】，UDP 流量转发
 
+【取消】，禁用 QUIC
  使用 Dnsmasq 转发
 【勾选】，禁止 Dnsmasq 缓存 DNS
 
@@ -56,13 +57,13 @@ TCP Keep-alive 间隔（s）15
 删除 全局网络选项 » IPv6 ULA 前缀
 
 接口 » LAN » 高级设置
-【取消】委托 IPv6 前缀
+【取消】，委托 IPv6 前缀
 IPv6 分配长度 64
 
 接口 » LAN » DHCP 服务器
 RA 服务 服务器模式
 DHCPv6 服务 已禁用
-【取消】本地 IPV6 DNS 服务器
+【取消】，本地 IPV6 DNS 服务器
 NDP 代理 已禁用
 
 接口 » LAN » DHCP 服务器 » IPv6 RA 设置
@@ -70,5 +71,5 @@ NDP 代理 已禁用
 RA 标记 无
 
 接口 » WAN6 » 高级设置
-【取消】IPv6 源路由
+【取消】，IPv6 源路由
 ```
