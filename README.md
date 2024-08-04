@@ -51,7 +51,7 @@ Github 地址修改 https://testingcf.jsdelivr.net/
   清空 NameServer、FallBack、Default-NameServer 所有DNS
   NameServer填入一个营运商DNS
 
-☒ Fake-IP 持久化
+☑ Fake-IP 持久化
 
 ☑ 启用 TCP 并发
    TCP Keep-alive 间隔（s）15
