@@ -92,4 +92,8 @@ iptables -t nat -A PREROUTING -p udp -s 192.168.6.1/16 --dport 53 -j CLASH_DNS_R
 iptables -t nat -A PREROUTING -p tcp -s 192.168.6.1/16 --dport 53 -j CLASH_DNS_RULE
 iptables -t nat -A PREROUTING -p udp -s 192.168.6.1/16 --dport 853 -j CLASH_DNS_RULE
 iptables -t nat -A PREROUTING -p tcp -s 192.168.6.1/16 --dport 853 -j CLASH_DNS_RULE
+
+只能看自制剧问题
+插件设置-> 流媒体增强
+勾选 预解析 Netflix
 ```
