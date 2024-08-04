@@ -54,7 +54,7 @@ Github 地址修改 https://testingcf.jsdelivr.net/
 ☑ Fake-IP 持久化
 
 ☑ 启用 TCP 并发
-   TCP Keep-alive 间隔（s）1800
+   TCP Keep-alive 间隔（s）15
 ☑ 启用 GeoIP Dat 版数据库
 ☒ 启用流量（域名）探测
 ☒ 探测（嗅探）纯 IP 连接
@@ -83,4 +83,13 @@ RA 标记 无
 
 接口 » WAN6 » 高级设置
 ☒ IPv6 源路由
+```
+
+```
+**解决电视盒子 DNS泄漏 播放问题**
+**插件设置 开发者选项 **
+iptables -t nat -A PREROUTING -p udp -s 192.168.6.1/16 --dport 53 -j CLASH_DNS_RULE
+iptables -t nat -A PREROUTING -p tcp -s 192.168.6.1/16 --dport 53 -j CLASH_DNS_RULE
+iptables -t nat -A PREROUTING -p udp -s 192.168.6.1/16 --dport 853 -j CLASH_DNS_RULE
+iptables -t nat -A PREROUTING -p tcp -s 192.168.6.1/16 --dport 853 -j CLASH_DNS_RULE
 ```
