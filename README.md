@@ -54,7 +54,7 @@ Github 地址修改 https://testingcf.jsdelivr.net/
 ☑ Fake-IP 持久化
 
 ☑ 启用 TCP 并发
-TCP Keep-alive 间隔（s）1800
+   TCP Keep-alive 间隔（s）1800
 ☑ 启用 GeoIP Dat 版数据库
 ☒ 启用流量（域名）探测
 ☒ 探测（嗅探）纯 IP 连接
