@@ -26,15 +26,12 @@ luci-app-openclash + 全部内核 + GeoIP 数据库 + GeoSite 数据库
 ☑ UDP 流量转发
 
 ☑ 绕过服务器地址
-☑ 仅允许内网
-   WAN 接口名称 eth1
+☑ 实验性：绕过中国大陆 IP
+   大陆域名 DNS 服务器 填入营运商DNS
 
-本地 DNS 劫持 使用防火墙转发
+*本地 DNS 劫持 使用 Dnsmasq 转发
 
 
-☑ IPv6 流量代理
-   IPv6 代理模式 TProxy 模式
-☑ UDP 流量转发
 ☑ 允许解析 IPv6 类型的 DNS 请求
 
 ☑ 自动更新 GeoIP Dat 数据库
@@ -62,6 +59,12 @@ Github 地址修改 https://testingcf.jsdelivr.net/
 覆写设置 开发者选项 #27
 ruby_edit "$CONFIG_FILE" "['experimental']" "{'sniff-tls-sni'=>false}"
 
+**解决电视盒子 DNS泄漏 播放问题**
+iptables -t nat -A PREROUTING -p udp -s 192.168.6.1/16 --dport 53 -j CLASH_DNS_RULE
+iptables -t nat -A PREROUTING -p tcp -s 192.168.6.1/16 --dport 53 -j CLASH_DNS_RULE
+iptables -t nat -A PREROUTING -p udp -s 192.168.6.1/16 --dport 853 -j CLASH_DNS_RULE
+iptables -t nat -A PREROUTING -p tcp -s 192.168.6.1/16 --dport 853 -j CLASH_DNS_RULE
+
 ```
 **IPV6 设置**
 ```
@@ -83,17 +86,4 @@ RA 标记 无
 
 接口 » WAN6 » 高级设置
 ☒ IPv6 源路由
-```
-
-```
-**解决电视盒子 DNS泄漏 播放问题**
-**插件设置 开发者选项 **
-iptables -t nat -A PREROUTING -p udp -s 192.168.6.1/16 --dport 53 -j CLASH_DNS_RULE
-iptables -t nat -A PREROUTING -p tcp -s 192.168.6.1/16 --dport 53 -j CLASH_DNS_RULE
-iptables -t nat -A PREROUTING -p udp -s 192.168.6.1/16 --dport 853 -j CLASH_DNS_RULE
-iptables -t nat -A PREROUTING -p tcp -s 192.168.6.1/16 --dport 853 -j CLASH_DNS_RULE
-
-只能看自制剧问题
-插件设置-> 流媒体增强
-勾选 预解析 Netflix
 ```
