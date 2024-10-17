@@ -22,8 +22,10 @@ luci-app-openclash + 全部内核 + GeoIP 数据库 + GeoSite 数据库
 **插件设置**
 
 ☑ 使用 Meta 内核
-   运行模式 Fake-IP（增强）模式
-☑ UDP 流量转发
+   Fake-IP（TUN-混合）模式【UDP-TUN，TCP-转发】
+
+网络栈类型   gVisor
+
 
 ☑ 绕过服务器地址
 ☑ 实验性：绕过中国大陆 IP
@@ -46,11 +48,13 @@ Github 地址修改 https://testingcf.jsdelivr.net/
 
 ☑ 自定义上游 DNS 服务器
   清空 NameServer、FallBack、Default-NameServer 所有DNS
-  NameServer填入一个营运商DNS
+
+☑ 追加上游 DNS
 
 ☑ Fake-IP 持久化
 
 ☑ 启用 TCP 并发
+☑ 启用统一延迟
    TCP Keep-alive 间隔（s）15
 ☑ 启用 GeoIP Dat 版数据库
 ☒ 启用流量（域名）探测
@@ -60,6 +64,7 @@ Github 地址修改 https://testingcf.jsdelivr.net/
 ruby_edit "$CONFIG_FILE" "['experimental']" "{'sniff-tls-sni'=>false}"
 
 **解决电视盒子 DNS泄漏 播放问题**
+防火墙 - 自定义规则
 iptables -t nat -A PREROUTING -p udp -s 192.168.6.1/16 --dport 53 -j CLASH_DNS_RULE
 iptables -t nat -A PREROUTING -p tcp -s 192.168.6.1/16 --dport 53 -j CLASH_DNS_RULE
 iptables -t nat -A PREROUTING -p udp -s 192.168.6.1/16 --dport 853 -j CLASH_DNS_RULE
