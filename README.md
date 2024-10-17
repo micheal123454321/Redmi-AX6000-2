@@ -14,7 +14,7 @@ luci-app-upnp
 luci-theme-argon
 luci-theme-bootstrap
 luci-app-ttyd
-luci-app-openclash + 全部内核 + GeoIP 数据库 + GeoSite 数据库
+luci-app-openclash v0.46.014-beta + 全部内核 + GeoIP 数据库 + GeoSite 数据库
 ```
 
 **OpenClash 设置**
