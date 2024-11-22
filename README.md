@@ -47,12 +47,9 @@ Github 地址修改 https://testingcf.jsdelivr.net/
 ☑ 自定义上游 DNS 服务器
   清空 NameServer、FallBack、Default-NameServer 所有DNS
 
-☑ 追加上游 DNS
-
 ☑ Fake-IP 持久化
 
 ☑ 启用 TCP 并发
-☑ 启用统一延迟
 
 ☑ 启用 GeoIP Dat 版数据库
 ☒ 启用流量（域名）探测
