@@ -22,21 +22,20 @@ luci-app-openclash v0.46.014-beta + 全部内核 + GeoIP 数据库 + GeoSite 数
 **插件设置**
 
 ☑ 使用 Meta 内核
-   运行模式 Fake-IP（增强）模式
-☒ UDP 流量转发
+运行模式 Fake-IP（TUN-混合）模式【UDP-TUN，TCP-转发】
 
-☒ 路由本机代理
+网络栈类型 System
+
 ☑ 禁用 QUIC
-☑ 绕过服务器地址
-☑ 实验性：绕过中国大陆 IP
-   大陆域名 DNS 服务器 填入营运商DNS
 
-*本地 DNS 劫持 使用 Dnsmasq 转发
+本地 DNS 劫持 使用防火墙转发
 
+局域网访问控制模式 黑名单模式
 
 ☑ 允许解析 IPv6 类型的 DNS 请求
 
 ☑ 自动更新 GeoIP Dat 数据库
+☑ 自动更新 GeoSite 数据库
 ☑ 自动更新 大陆白名单
 
 
@@ -53,7 +52,9 @@ Github 地址修改 https://testingcf.jsdelivr.net/
 
 ☑ 启用 GeoIP Dat 版数据库
 ☒ 启用流量（域名）探测
-☒ 探测（嗅探）纯 IP 连接
+☑ 探测（嗅探）纯 IP 连接
+
+
 
 覆写设置 开发者选项 #27
 ruby_edit "$CONFIG_FILE" "['experimental']" "{'sniff-tls-sni'=>false}"
