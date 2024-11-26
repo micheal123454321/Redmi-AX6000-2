@@ -23,14 +23,17 @@ luci-app-openclash v0.46.014-beta + 全部内核 + GeoIP 数据库 + GeoSite 数
 
 ☑ 使用 Meta 内核
 运行模式 Fake-IP（TUN-混合）模式【UDP-TUN，TCP-转发】
+网络栈类型 Mixed（仅 Meta 内核）
 
-网络栈类型 System
-
+☑ 路由本机代理
 ☑ 禁用 QUIC
+☑ 绕过服务器地址
 
-本地 DNS 劫持 使用防火墙转发
+☑ 实验性：绕过中国大陆 IP
+大陆域名 DNS 服务器 211.136.192.6
 
-局域网访问控制模式 黑名单模式
+本地 DNS 劫持 使用 Dnsmasq 转发
+☑ 禁止 Dnsmasq 缓存 DNS
 
 ☑ 允许解析 IPv6 类型的 DNS 请求
 
@@ -44,27 +47,23 @@ luci-app-openclash v0.46.014-beta + 全部内核 + GeoIP 数据库 + GeoSite 数
 Github 地址修改 https://testingcf.jsdelivr.net/
 
 ☑ 自定义上游 DNS 服务器
-  清空 NameServer、FallBack、Default-NameServer 所有DNS
-
 ☑ Fake-IP 持久化
+☑ Nameserver-Policy "geosite:cn,apple,private": [223.5.5.5,119.29.29.29]
+
+☑ NameServer tls://8.8.4.4 指定策略组（支持正则匹配）🇭🇰 香港
+☑ NameServer tls://1.1.1.1 指定策略组（支持正则匹配）🇭🇰 香港
+
+☑ Default-NameServer 223.5.5.5 ☑ 节点域名解析
+☑ Default-NameServer 119.29.29.29 ☑ 节点域名解析
 
 ☑ 启用 TCP 并发
-
+☑ TCP Keep-alive 间隔（s）1800
+☑ Geodata 数据加载方式 标准模式
 ☑ 启用 GeoIP Dat 版数据库
 ☒ 启用流量（域名）探测
-☑ 探测（嗅探）纯 IP 连接
+☒ 探测（嗅探）纯 IP 连接
 
 
-
-覆写设置 开发者选项 #27
-ruby_edit "$CONFIG_FILE" "['experimental']" "{'sniff-tls-sni'=>false}"
-
-**解决电视盒子 DNS泄漏 播放问题**
-防火墙 - 自定义规则
-iptables -t nat -A PREROUTING -p udp -s 192.168.6.1/16 --dport 53 -j CLASH_DNS_RULE
-iptables -t nat -A PREROUTING -p tcp -s 192.168.6.1/16 --dport 53 -j CLASH_DNS_RULE
-iptables -t nat -A PREROUTING -p udp -s 192.168.6.1/16 --dport 853 -j CLASH_DNS_RULE
-iptables -t nat -A PREROUTING -p tcp -s 192.168.6.1/16 --dport 853 -j CLASH_DNS_RULE
 
 ```
 **IPV6 设置**
@@ -85,6 +84,4 @@ NDP 代理 已禁用
 启用 SLAAC
 RA 标记 无
 
-接口 » WAN6 » 高级设置
-☒ IPv6 源路由
 ```
