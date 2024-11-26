@@ -30,7 +30,7 @@ luci-app-openclash v0.46.014-beta + 全部内核 + GeoIP 数据库 + GeoSite 数
 ☑ 绕过服务器地址
 
 ☑ 实验性：绕过中国大陆 IP
-大陆域名 DNS 服务器 211.136.192.6
+大陆域名 DNS 服务器 223.5.5.5
 
 本地 DNS 劫持 使用 Dnsmasq 转发
 ☑ 禁止 Dnsmasq 缓存 DNS
