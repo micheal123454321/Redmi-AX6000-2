@@ -27,13 +27,8 @@ luci-app-openclash v0.46.014-beta + 全部内核 + GeoIP 数据库 + GeoSite 数
 
 ☑ 路由本机代理
 ☑ 禁用 QUIC
-☑ 绕过服务器地址
 
-☑ 实验性：绕过中国大陆 IP
-大陆域名 DNS 服务器 223.5.5.5
-
-本地 DNS 劫持 使用 Dnsmasq 转发
-☑ 禁止 Dnsmasq 缓存 DNS
+☑ 本地 DNS 劫持 使用防火墙转发
 
 ☑ 允许解析 IPv6 类型的 DNS 请求
 
@@ -60,9 +55,11 @@ Github 地址修改 https://testingcf.jsdelivr.net/
 ☑ TCP Keep-alive 间隔（s）1800
 ☑ Geodata 数据加载方式 标准模式
 ☑ 启用 GeoIP Dat 版数据库
-☒ 启用流量（域名）探测
-☒ 探测（嗅探）纯 IP 连接
+☑ 启用流量（域名）探测
+☑ 探测（嗅探）纯 IP 连接
 
+
+☒ DHCP/DNS DNS 重定向
 
 
 ```
