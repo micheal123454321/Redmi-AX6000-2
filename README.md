@@ -62,9 +62,6 @@ Github 地址修改 https://testingcf.jsdelivr.net/
 ✅ 启用流量（域名）探测
 ✅ 探测（嗅探）纯 IP 连接
 
-
-✅ 更新 [Meta] 内核版本为 dev版本，支持 Hysteria2
-
 ```
 **IPV6 设置**
 ```
