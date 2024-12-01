@@ -27,7 +27,8 @@ luci-app-openclash v0.46.014-beta + 全部内核 + GeoIP 数据库 + GeoSite 数
 
 
 ✅ 路由本机代理
-❌ 禁用 QUIC
+✅ 禁用 QUIC
+✅ 绕过服务器地址
 
 ✅ 本地 DNS 劫持 使用防火墙转发
 
