@@ -42,6 +42,12 @@ luci-app-openclash v0.46.014-beta + 全部内核 + GeoIP 数据库 + GeoSite 数
 ✅ 自动更新 大陆白名单
 
 
+插件设置 开发者选 
+iptables -t nat -A PREROUTING -p udp -s 192.168.6.1/16 --dport 53 -j CLASH_DNS_RULE
+iptables -t nat -A PREROUTING -p tcp -s 192.168.6.1/16 --dport 53 -j CLASH_DNS_RULE
+iptables -t nat -A PREROUTING -p udp -s 192.168.6.1/16 --dport 853 -j CLASH_DNS_RULE
+iptables -t nat -A PREROUTING -p tcp -s 192.168.6.1/16 --dport 853 -j CLASH_DNS_RULE
+
 **覆写设置**
 
 Github 地址修改 https://testingcf.jsdelivr.net/
