@@ -57,6 +57,8 @@ Github 地址修改 https://testingcf.jsdelivr.net/
 ✅ Nameserver-Policy "geosite:cn,apple,private": [223.5.5.5]
 
 ✅ NameServer - https://dns.cloudflare.com/dns-query#⚡️ 国际代理&h3=true
+✅ NameServer - https://dns.google/dns-query#⚡️ 国际代理&h3=true
+
 ✅ Default-NameServer 223.5.5.5 ✅ 节点域名解析
 
 
@@ -66,9 +68,12 @@ Github 地址修改 https://testingcf.jsdelivr.net/
 ✅ 启用 GeoIP Dat 版数据库
 ✅ 启用流量（域名）探测
 ✅ 探测（嗅探）纯 IP 连接
+✅ 自定义流量探测（嗅探）设置
 
 手动更新为 mihomo 内核 mihomo-linux-arm64-v1.18.10.gz
 支持 Hysteria2节点
+
+❌ DHCP/DNS 取消 DNS 重定向
 
 ```
 **IPV6 设置**
@@ -81,9 +86,9 @@ Github 地址修改 https://testingcf.jsdelivr.net/
 
 接口 » LAN » DHCP 服务器
 ✅ RA 服务 服务器模式
-✅ DHCPv6 服务 已禁用
-✅ 本地 IPV6 DNS 服务器
-✅ NDP 代理 已禁用
+❌ DHCPv6 服务 已禁用
+❌ 本地 IPV6 DNS 服务器
+❌ NDP 代理 已禁用
 
 接口 » LAN » DHCP 服务器 » IPv6 RA 设置
 ✅ 启用 SLAAC
