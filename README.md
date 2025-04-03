@@ -56,8 +56,8 @@ Github 地址修改 https://testingcf.jsdelivr.net/
 ✅ Fake-IP 持久化
 ✅ Nameserver-Policy "geosite:cn,apple,private": [223.5.5.5]
 
-✅ NameServer - https://dns.cloudflare.com/dns-query#⚡️ 国际代理&h3=true
-✅ NameServer - https://dns.google/dns-query#⚡️ 国际代理&h3=true
+✅ NameServer - 1.1.1.1/dns-query#⚡️ 国际代理&h3=true
+✅ NameServer - 8.8.8.8/dns-query#⚡️ 国际代理&h3=true
 
 ✅ Default-NameServer 223.5.5.5 ✅ 节点域名解析
 
@@ -68,7 +68,7 @@ Github 地址修改 https://testingcf.jsdelivr.net/
 ✅ 启用 GeoIP Dat 版数据库
 ✅ 启用流量（域名）探测
 ✅ 探测（嗅探）纯 IP 连接
-✅ 自定义流量探测（嗅探）设置
+❌ 自定义流量探测（嗅探）设置
 
 手动更新为 mihomo 内核 mihomo-linux-arm64-v1.18.10.gz
 支持 Hysteria2节点
