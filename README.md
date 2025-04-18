@@ -22,15 +22,17 @@ luci-app-openclash v0.46.014-beta + 全部内核 + GeoIP 数据库 + GeoSite 数
 **插件设置**
 
 ✅ 使用 Meta 内核
-运行模式 Fake-IP（增强）模式
-✅ UDP 流量转发
+运行模式 Redir-Host（兼容）模式
 
+✅ UDP 流量转发
 
 ✅ 路由本机代理
 ✅ 禁用 QUIC
 ✅ 绕过服务器地址
+仅允许常用端口流量 禁用
 
-✅ 本地 DNS 劫持 使用防火墙转发
+✅ 本地 DNS 劫持 使用 Dnsmasq 转发
+✅ 禁止 Dnsmasq 缓存 DNS
 
 ✅ IPv6 流量代理
 ✅ IPv6 代理模式 TProxy 模式
@@ -42,22 +44,15 @@ luci-app-openclash v0.46.014-beta + 全部内核 + GeoIP 数据库 + GeoSite 数
 ✅ 自动更新 大陆白名单
 
 
-插件设置 开发者选 
-iptables -t nat -A PREROUTING -p udp -s 192.168.6.1/16 --dport 53 -j CLASH_DNS_RULE
-iptables -t nat -A PREROUTING -p tcp -s 192.168.6.1/16 --dport 53 -j CLASH_DNS_RULE
-iptables -t nat -A PREROUTING -p udp -s 192.168.6.1/16 --dport 853 -j CLASH_DNS_RULE
-iptables -t nat -A PREROUTING -p tcp -s 192.168.6.1/16 --dport 853 -j CLASH_DNS_RULE
-
 **覆写设置**
 
 Github 地址修改 https://testingcf.jsdelivr.net/
 
 ✅ 自定义上游 DNS 服务器
-✅ Fake-IP 持久化
-✅ Nameserver-Policy "geosite:cn,apple,private": [223.5.5.5]
+✅ Nameserver-Policy "geosite:cn,private": [223.5.5.5]
 
-✅ NameServer - 1.1.1.1/dns-query#⚡️ 国际代理&h3=true
-✅ NameServer - 8.8.8.8/dns-query#⚡️ 国际代理&h3=true
+✅ NameServer - tls://1.1.1.1#⚡️ 国际代理
+✅ NameServer - tls://1.0.0.1#⚡️ 国际代理
 
 ✅ Default-NameServer 223.5.5.5 ✅ 节点域名解析
 
@@ -67,10 +62,10 @@ Github 地址修改 https://testingcf.jsdelivr.net/
 ✅ Geodata 数据加载方式 标准模式
 ✅ 启用 GeoIP Dat 版数据库
 ✅ 启用流量（域名）探测
-✅ 探测（嗅探）纯 IP 连接
+❌ 探测（嗅探）纯 IP 连接
 ❌ 自定义流量探测（嗅探）设置
 
-手动更新为 mihomo 内核 mihomo-linux-arm64-v1.18.10.gz
+手动更新为 mihomo 内核 mihomo-linux-arm64-v1.18.5.gz
 支持 Hysteria2节点
 
 ❌ DHCP/DNS 取消 DNS 重定向
