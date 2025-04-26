@@ -51,8 +51,8 @@ Github 地址修改 https://testingcf.jsdelivr.net/
 ✅ 自定义上游 DNS 服务器
 ✅ Nameserver-Policy "geosite:cn,private": [223.5.5.5]
 
-✅ NameServer - tls://1.1.1.1#⚡️ 国际代理
-✅ NameServer - tls://1.0.0.1#⚡️ 国际代理
+✅ NameServer - tls://8.8.8.8#⚡️ 国际代理
+✅ NameServer - tls://8.8.4.4#⚡️ 国际代理
 
 ✅ Default-NameServer 223.5.5.5 ✅ 节点域名解析
 
@@ -68,7 +68,7 @@ Github 地址修改 https://testingcf.jsdelivr.net/
 手动更新为 mihomo 内核 mihomo-linux-arm64-v1.18.5.gz
 支持 Hysteria2节点
 
-❌ DHCP/DNS 取消 DNS 重定向
+✅  DHCP/DNS  DNS 重定向 重定向客户端DNS到dnsmasq
 
 ```
 **IPV6 设置**
