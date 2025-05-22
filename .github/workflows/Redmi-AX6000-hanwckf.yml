@@ -36,6 +36,9 @@ env:
 jobs:
   build:
     runs-on: ubuntu-20.04
+
+    permissions:
+      contents: write
     
     steps:
     - name: 检查项目分支
