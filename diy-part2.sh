@@ -41,6 +41,7 @@ mv OpenClash/luci-app-openclash feeds/luci/applications/luci-app-openclash
 curl -sL -m 30 --retry 2 https://github.com/MetaCubeX/mihomo/releases/download/v1.19.2/mihomo-linux-arm64-v1.19.2.gz -o /tmp/clash.gz
 gzip -d /tmp/clash.gz /tmp >/dev/null 2>&1
 chmod +x /tmp/mihomo-linux-arm64 >/dev/null 2>&1
+mkdir -p feeds/luci/applications/luci-app-openclash/root/etc/openclash/core
 mv /tmp/mihomo-linux-arm64 feeds/luci/applications/luci-app-openclash/root/etc/openclash/core/clash_meta >/dev/null 2>&1
 # ##---------------------------------------------------------
 
