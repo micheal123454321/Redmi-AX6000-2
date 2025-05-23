@@ -16,7 +16,6 @@ sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generat
 # ---------------------------------------------------------------
 ## OpenClash
 git clone -b v0.46.064 --depth=1 https://github.com/vernesong/openclash.git OpenClash
-# git clone --depth 1 https://github.com/vernesong/openclash.git OpenClash
 rm -rf feeds/luci/applications/luci-app-openclash
 mv OpenClash/luci-app-openclash feeds/luci/applications/luci-app-openclash
 # ---------------------------------------------------------------
