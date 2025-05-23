@@ -21,7 +21,7 @@ mv OpenClash/luci-app-openclash feeds/luci/applications/luci-app-openclash
 # ---------------------------------------------------------------
 
 # ##------------- meta core ---------------------------------
-wget --timeout=30 --tries=3 --waitretry=5 -O https://github.com/MetaCubeX/mihomo/releases/download/v1.19.2/mihomo-linux-arm64-v1.19.2.gz
+wget https://github.com/MetaCubeX/mihomo/releases/download/v1.19.2/mihomo-linux-arm64-v1.19.2.gz
 gzip -d mihomo-linux-arm64-v1.19.2.gz
 chmod +x mihomo-linux-arm64-v1.19.2 >/dev/null 2>&1
 mkdir -p feeds/luci/applications/luci-app-openclash/root/etc/openclash/core
