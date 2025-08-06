@@ -8,9 +8,10 @@
 **插件设置**
 
 ✅ 使用 Meta 内核
-运行模式 Fake-IP（TUN-混合）模式【UDP-TUN，TCP-转发】
 
-✅ 网络栈类型 Mixed（仅 Meta 内核）
+✅ 运行模式 Fake-IP（增强）模式
+
+✅ 启用时服务器必须支持 UDP 转发
 
 
 ✅ 路由本机代理
@@ -22,7 +23,8 @@
 ✅ 禁止 Dnsmasq 缓存 DNS
 
 ✅ IPv6 流量代理
-✅ IPv6 代理模式 Mix 混合模式【UDP-TUN，TCP-转发】（仅 Meta 内核）
+✅ IPv6 代理模式 TProxy 模式
+✅ UDP 流量转发
 ✅ 允许解析 IPv6 类型的 DNS 请求
 
 ✅ 自动更新 GeoIP Dat 数据库
@@ -36,22 +38,19 @@ Github 地址修改 https://testingcf.jsdelivr.net/
 
 ✅ 自定义上游 DNS 服务器
 ✅ Fake-IP 持久化
-✅ Fake-IP-Filter
-✅ Fake-IP-Filter-Mode 黑名单模式
-
-
 ✅ Nameserver-Policy
 "geosite:!cn":
-    - tls://1.1.1.1#⚡️ 国际代理
-    - tls://8.8.8.8#⚡️ 国际代理
+  - tls://dns.google#⚡️ 国际代理
+
 
 ✅ NameServer
    - 223.5.5.5
+    ✅ 直连域名解析
+    ✅ 节点域名解析
 
 ✅ FallBack
 - tls://dns.google
-- tls://1.1.1.1
-
+    ✅ 指定策略组（支持正则匹配） ⚡️ 国际代理
 
 
 ✅ 启用 TCP 并发
