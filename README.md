@@ -60,7 +60,7 @@ Github 地址修改 https://testingcf.jsdelivr.net/
 ✅ 探测（嗅探）纯 IP 连接
 ✅ 自定义流量探测（嗅探）设置
 
-手动更新为 mihomo 内核 mihomo-linux-arm64-v1.19.1.gz
+手动更新为 mihomo 内核 mihomo-linux-arm64-v1.19.2.gz
 支持 Hysteria2节点
 
 ✅  DHCP/DNS  DNS 重定向 重定向客户端DNS到dnsmasq
