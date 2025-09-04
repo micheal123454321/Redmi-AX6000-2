@@ -48,10 +48,6 @@ Github 地址修改 https://testingcf.jsdelivr.net/
     ✅ 直连域名解析
     ✅ 节点域名解析
 
-✅ FallBack
-- tls://dns.google
-    ✅ 指定策略组（支持正则匹配） ⚡️ 国际代理
-
 
 ✅ 启用 TCP 并发
 ❌ Geodata 数据加载方式 禁用
